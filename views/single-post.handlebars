@@ -1,0 +1,38 @@
+{{> header }}
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+      <article class="post mt-4">
+        <h2 class="post-title">{{post.title}}</h2>
+        <p class="post-content">{{post.content}}</p>
+        <p class="post-author">Posted by: {{post.User.username}}</p>
+        <p class="post-date">{{format_date post.createdAt}}</p>
+      </article>
+
+      {{#if loggedIn}}
+        <div class="new-comment mt-4">
+          <h4>Leave a Comment</h4>
+          <form id="new-comment-form">
+            <input type="hidden" id="post-id" value="{{post.id}}" />
+            <div class="form-group">
+              <textarea class="form-control" id="comment-content" rows="3" placeholder="Your comment..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit Comment</button>
+          </form>
+        </div>
+      {{/if}}
+
+      <div class="comments mt-4">
+        <h4>Comments</h4>
+        {{#each post.Comments}}
+          <div class="comment">
+            <p class="comment-content">{{this.content}}</p>
+            <p class="comment-author">By: {{this.User.username}}</p>
+            <p class="comment-date">{{format_date this.createdAt}}</p>
+          </div>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</div>

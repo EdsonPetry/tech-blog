@@ -1,0 +1,91 @@
+/* General styles */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f8f9fa;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Header styles */
+header {
+  background-color: #343a40;
+  padding: 10px 0;
+}
+
+header a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-right: 15px;
+}
+
+header a:hover {
+  text-decoration: underline;
+}
+
+/* Post styles */
+.post {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.post-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.post-content {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.post-author,
+.post-date {
+  font-size: 14px;
+  color: #6c757d;
+  margin-bottom: 10px;
+}
+
+/* Comment styles */
+.new-comment {
+  margin-top: 40px;
+}
+
+.comments {
+  margin-top: 20px;
+}
+
+.comment {
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+}
+
+.comment-content {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.comment-author,
+.comment-date {
+  font-size: 12px;
+  color: #6c757d;
+  margin-bottom: 5px;
+}
+
+/* Form styles */
+form {
+  margin-bottom: 20px;
+}
+
+form input,
+form textarea {
+  margin-bottom: 10px;
+}

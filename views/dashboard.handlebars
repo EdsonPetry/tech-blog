@@ -1,0 +1,25 @@
+{{> header}}
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="text-center">Dashboard</h1>
+      <a href="/new-post" class="btn btn-primary mb-3">Create New Post</a>
+    </div>
+  </div>
+  <div class="row">
+    {{#each posts}}
+      <div class="col-md-4">
+        <div class="card mb-3">
+          <div class="card-body">
+            <h5 class="card-title">{{title}}</h5>
+            <p class="card-text">{{content}}</p>
+            <p class="card-text"><small class="text-muted">Posted by {{user.username}} on {{format_date created_at}}</small></p>
+            <a href="/post/{{id}}" class="btn btn-info">View Post</a>
+            <a href="/post/{{id}}/edit" class="btn btn-warning">Edit Post</a>
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</div>

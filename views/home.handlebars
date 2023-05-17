@@ -1,0 +1,25 @@
+{{> header }}
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="text-center">Welcome to Tech Blog</h1>
+    </div>
+  </div>
+  {{#each posts}}
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <div class="card mt-4">
+          <div class="card-body">
+            <h5 class="card-title">{{title}}</h5>
+            <p class="card-text">{{content}}</p>
+            <a href="/post/{{id}}" class="btn btn-primary">View Post</a>
+          </div>
+          <div class="card-footer text-muted">
+            Posted by {{User.username}} on {{format_date created_at}}
+          </div>
+        </div>
+      </div>
+    </div>
+  {{/each}}
+</div>
